@@ -1577,7 +1577,7 @@ html {
 }
 
 .content-fourth__floor-first__box-first {
-    background-image: url(box1.png);
+    background-image: url(./img/box1.png);
     background-repeat: no-repeat;
     height: 260px;
     width: 367px;
@@ -1587,7 +1587,7 @@ html {
 }
 
 .content-fourth__floor-first__box-second {
-    background-image: url(box2.png);
+    background-image: url(./img/box2.png);
     background-repeat: no-repeat;
     height: 260px;
     width: 396px;
@@ -1604,7 +1604,7 @@ html {
 }
 
 .content-fourth__floor-second__box-first {
-    background-image: url(box3.png);
+    background-image: url(./img/box3.png);
     background-repeat: no-repeat;
     height: 260px;
     width: 614px;
@@ -1612,7 +1612,7 @@ html {
 }
 
 .content-fourth__floor-second__box-second {
-    background-image: url(box4.png);
+    background-image: url(./img/box4.png);
     background-repeat: no-repeat;
     height: 260px;
     width: 614px;
@@ -1631,7 +1631,7 @@ html {
 }
 
 .content-fourth__floor-third__box-first {
-    background-image: url(box5.png);
+    background-image: url(./img/box5.png);
     background-repeat: no-repeat;
     height: 260px;
     width: 400px;
@@ -1639,7 +1639,7 @@ html {
 }
 
 .content-fourth__floor-third__box-second {
-    background-image: url(box6.png);
+    background-image: url(./img/box6.png);
     background-repeat: no-repeat;
     height: 260px;
     width: 400px;
@@ -1647,7 +1647,7 @@ html {
 }
 
 .content-fourth__floor-third__box-third {
-    background-image: url(box7.png);
+    background-image: url(./img/box7.png);
     background-repeat: no-repeat;
     height: 260px;
     width: 400px;
