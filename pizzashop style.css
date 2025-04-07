@@ -1,0 +1,3670 @@
+/* Шрифты */
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('/fonts/Muller-Trial-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('/fonts/Muller-Trial-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('/fonts/Muller-Trial-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* Глобальныу стили */
+
+:root {
+    --color-white: #ffffff;
+    --color-text: #A3A3A3;
+    --color-orenge: linear-gradient(267deg, rgba(255,89,36,1) 12%, rgba(255,162,41,1) 100%);
+    --color-background: linear-gradient(180deg, rgba(30,12,0,1) 0%, rgb(26, 11, 0) 100%);
+
+    --font-family: 'Metropolis', sans-serif;
+
+    --transition-duration: 200ms;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-white);
+    background: var(--color-background);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(1255px + 10px * 2);
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Стили */
+
+.header {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header--logo {
+    font-size: 34px;
+    font-weight: 800;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+}
+
+.header__menu--list {
+    display: flex;
+    gap: 80px;
+}
+
+.menu-is-active {
+    transform: translateY(-100%);  
+    transition: 900ms;
+    position: fixed; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin-top: 0;
+    padding-top: 10%;
+    line-height: 150px;
+    font-size: 30px;
+    background-color: #1e0c007a;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(3px);
+    z-index: 100;
+}
+
+.menu-activ {
+    transform: translateY(0);
+}
+
+.menu-is-active--list {
+    text-align: center;
+}
+
+.menu-is-active--item a {
+    color: var(--color-text);
+    transition: var(--transition-duration);
+}
+
+.header__menu--item a {
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 400;
+    transition: var(--transition-duration);
+}
+
+.header__items {
+    display: flex;
+    position: relative;
+    z-index: 20;
+    
+}
+
+.header__items--button {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-white);
+    border: 0;
+    border-radius: 84px;
+    background: var(--color-orenge);
+    height: 40px;
+    width: 163px;
+    white-space: nowrap;
+    text-align: center;
+    transition: var(--transition-duration);
+    cursor: pointer;
+}
+
+.header__items--image {
+    background: var(--color-orenge);
+    border-radius: 50%;
+    padding: 6px;
+    margin-left: 25px;
+    transition: var(--transition-duration);
+    cursor: pointer;
+}
+
+.burger-button {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+}
+
+.content-first {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-first__column-first {
+    position: relative;
+}
+
+.content-first__column-first--zogolovok {
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: 0;
+    max-width: 596px;
+}
+
+.content-first__column-first--zogolovok--img {
+    margin-inline: 15px;
+    position: relative;
+    top: 13px;
+}
+
+.content-first__column-first--text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    color: var(--color-text);
+    width: 430px;
+    margin-top: -35px;
+}
+
+.content-first__column-first--text--element {
+    color: var(--color-white);
+}
+
+.content-first__column-first--description {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.content-first__column-first--img-description {
+    margin-top: -30px;
+    position: relative;
+    right: 30px;
+}
+
+.content-first__column-first__switch {
+    display: flex;
+    position: relative;
+    width: 388px;
+    height: 62px;
+    border: 2px solid #FFA228;
+    border-radius: 100px;
+}
+
+.content-first__column-first__switch--element-first {
+    font-size: 19px;
+    font-weight: 500;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+    margin: 0;
+    padding-block: 22px;
+    padding-inline: 72px;
+    border-radius: 100px;
+    position: absolute;
+    left: -1px;
+    top: -2px;
+    cursor: pointer;
+}
+
+.content-first__column-first__switch--element-second {
+    font-size: 19px;
+    font-weight: 500;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+    margin: 0;
+    padding-block: 22px;
+    padding-right: 37px;
+    padding-left: 50px;
+    border-radius: 100px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    cursor: pointer;
+}
+
+.content-first__column-first__switch-element-is-aktive {
+    color: var(--color-white);
+    background: var(--color-orenge);
+    animation-name: swith;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+}
+
+.content-first__column-first--pizza-fon {
+    position: absolute;
+    top: 25px;
+    left: 100px;
+}
+
+.content-first__column-first--arrow-small {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+}
+
+.content-first__column-first--arrow-big {
+    position: absolute;
+    top: 660px;
+    right: 10px;
+}
+
+.content-first__column-second {
+    position: relative;
+    max-width: 500px;
+}
+
+.content-first__column-second--pizza-ikon {
+    position: absolute;
+    top: 30px;
+    right: 120px;    
+}
+
+.content-first__column-second--fri {
+    position: absolute;
+    top: 520px;
+    left: -140px;
+}
+
+.content-first__column-second--fon1 {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+}
+
+.content-first__column-second--fon2 {
+    position: absolute;
+    top: 580px;
+    left: -160px;
+}
+
+.content-second {
+    margin-top: 50px;
+}
+
+.content-second--zogolovok {
+    font-size: 69px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.content-second--menu-fon {
+    position: absolute;
+    z-index: 10;
+    top: 1220px;
+    left: 30px;
+}
+
+.content-second__assortment {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 20;
+    flex-wrap: wrap;
+}
+
+.content-second__assortment--element {
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #210A01;
+    border-radius: 100px;
+    box-shadow: 0px 3px 10px 0px #FF6B000F;
+    padding: 20px 75px;
+    white-space: nowrap;
+    transition: var(--transition-duration);
+    cursor: pointer;
+}
+
+.content-second__menu {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 20;
+    margin-top: 110px;
+}
+
+.content-second__menu__first {
+    position: relative;
+    background-color: #210A01;
+    border-radius: 30px;
+    padding-inline: 30px;
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.content-second__menu__first--pizza {
+    position: absolute;
+    top: -80px;
+    left: 15%;
+}
+
+.content-second__menu__first--name {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.content-second__menu__first--composition {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text);
+    width: 230px;
+}
+
+.content-second__menu__first__numbers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.content-second__menu__first__numbers-first {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-second__menu__first__numbers-second {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-second__menu__first__numbers-third {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-second__menu__first--ingridients {
+    text-align: center;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+    border: 1px solid #FF5924;
+    border-radius: 84px;
+    padding-block: 10px;
+    width: 194px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-second__menu__first__price {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -15px;
+}
+
+.content-second__menu__first__price--summa {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.content-second__menu__first__price--dollar {
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    right: 23px;
+}
+
+.content-second__menu__first__price__calculator {
+    display: flex;
+    gap: 13px;
+}
+
+.content-second__menu__first__price__calculator--minus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-second__menu__first__price__calculator--plus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 24px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-second__menu__first__price__calculator--number {
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.content-second__menu__first--order {
+    font-size: 17px;
+    font-weight: 500;
+    background: var(--color-orenge);
+    border-radius: 84px;
+    padding-block: 13px;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-second__menu__second {
+    position: relative;
+    background-color: #210A01;
+    border-radius: 30px;
+    padding-inline: 30px;
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.content-second__menu__second--pizza {
+    position: absolute;
+    top: -80px;
+    left: 15%;
+}
+
+.content-second__menu__second--name {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.content-second__menu__second--composition {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text);
+    width: 230px;
+}
+
+.content-second__menu__second__numbers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.content-second__menu__second__numbers-first {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-second__menu__second__numbers-second {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-second__menu__second__numbers-third {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-second__menu__second--ingridients {
+    text-align: center;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+    border: 1px solid #FF5924;
+    border-radius: 84px;
+    padding-block: 10px;
+    width: 194px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-second__menu__second__price {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -15px;
+}
+
+.content-second__menu__second__price--summa {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.content-second__menu__second__price--dollar {
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    right: 23px;
+}
+
+.content-second__menu__second__price__calculator {
+    display: flex;
+    gap: 13px;
+}
+
+.content-second__menu__second__price__calculator--minus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-second__menu__second__price__calculator--plus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 24px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-second__menu__second__price__calculator--number {
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.content-second__menu__second--order {
+    font-size: 17px;
+    font-weight: 500;
+    background: var(--color-orenge);
+    border-radius: 84px;
+    padding-block: 13px;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-second__menu__third {
+    position: relative;
+    background-color: #210A01;
+    border-radius: 30px;
+    padding-inline: 30px;
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.content-second__menu__third--pizza {
+    position: absolute;
+    top: -80px;
+    left: 15%;
+}
+
+.content-second__menu__third--name {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.content-second__menu__third--composition {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text);
+    width: 230px;
+}
+
+.content-second__menu__third__numbers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.content-second__menu__third__numbers-first {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-second__menu__third__numbers-second {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-second__menu__third__numbers-third {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-second__menu__third--ingridients {
+    text-align: center;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+    border: 1px solid #FF5924;
+    border-radius: 84px;
+    padding-block: 10px;
+    width: 194px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-second__menu__third__price {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -15px;
+}
+
+.content-second__menu__third__price--summa {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.content-second__menu__third__price--dollar {
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    right: 23px;
+}
+
+.content-second__menu__third__price__calculator {
+    display: flex;
+    gap: 13px;
+}
+
+.content-second__menu__third__price__calculator--minus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-second__menu__third__price__calculator--plus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 24px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-second__menu__third__price__calculator--number {
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.content-second__menu__third--order {
+    font-size: 17px;
+    font-weight: 500;
+    background: var(--color-orenge);
+    border-radius: 84px;
+    padding-block: 13px;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-second__menu__fourth {
+    position: relative;
+    background-color: #210A01;
+    border-radius: 30px;
+    padding-inline: 30px;
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.content-second__menu__fourth--pizza {
+    position: absolute;
+    top: -80px;
+    left: 15%;
+}
+
+.content-second__menu__fourth--name {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.content-second__menu__fourth--composition {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text);
+    width: 230px;
+}
+
+.content-second__menu__fourth__numbers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.content-second__menu__fourth__numbers-first {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-second__menu__fourth__numbers-second {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-second__menu__fourth__numbers-third {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-second__menu__fourth--ingridients {
+    text-align: center;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+    border: 1px solid #FF5924;
+    border-radius: 84px;
+    padding-block: 10px;
+    width: 194px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-second__menu__fourth__price {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -15px;
+}
+
+.content-second__menu__fourth__price--summa {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.content-second__menu__fourth__price--dollar {
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    right: 23px;
+}
+
+.content-second__menu__fourth__price__calculator {
+    display: flex;
+    gap: 13px;
+}
+
+.content-second__menu__fourth__price__calculator--minus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-second__menu__fourth__price__calculator--plus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 24px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-second__menu__fourth__price__calculator--number {
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.content-second__menu__fourth--order {
+    font-size: 17px;
+    font-weight: 500;
+    background: var(--color-orenge);
+    border-radius: 84px;
+    padding-block: 13px;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-second__menu {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 20;
+    margin-top: 110px;
+}
+
+.content-third__otcek-second__menu__first {
+    position: relative;
+    background-color: #210A01;
+    border-radius: 30px;
+    padding-inline: 30px;
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.content-third__otcek-second__menu__first--pizza {
+    position: absolute;
+    top: -80px;
+    left: 15%;
+}
+
+.content-third__otcek-second__menu__first--name {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.content-third__otcek-second__menu__first--composition {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text);
+    width: 230px;
+}
+
+.content-third__otcek-second__menu__first__numbers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.content-third__otcek-second__menu__first__numbers-first {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-third__otcek-second__menu__first__numbers-second {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-third__otcek-second__menu__first__numbers-third {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-third__otcek-second__menu__first--ingridients {
+    text-align: center;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+    border: 1px solid #FF5924;
+    border-radius: 84px;
+    padding-block: 10px;
+    width: 194px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-third__otcek-second__menu__first__price {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -15px;
+}
+
+.content-third__otcek-second__menu__first__price--summa {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.content-third__otcek-second__menu__first__price--dollar {
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    right: 23px;
+}
+
+.content-third__otcek-second__menu__first__price__calculator {
+    display: flex;
+    gap: 13px;
+}
+
+.content-third__otcek-second__menu__first__price__calculator--minus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-second__menu__first__price__calculator--plus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 24px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-second__menu__first__price__calculator--number {
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.content-third__otcek-second__menu__first--order {
+    font-size: 17px;
+    font-weight: 500;
+    background: var(--color-orenge);
+    border-radius: 84px;
+    padding-block: 13px;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-second__menu__second {
+    position: relative;
+    background-color: #210A01;
+    border-radius: 30px;
+    padding-inline: 30px;
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.content-third__otcek-second__menu__second--pizza {
+    position: absolute;
+    top: -80px;
+    left: 15%;
+}
+
+.content-third__otcek-second__menu__second--name {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.content-third__otcek-second__menu__second--composition {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text);
+    width: 230px;
+}
+
+.content-third__otcek-second__menu__second__numbers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.content-third__otcek-second__menu__second__numbers-first {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-third__otcek-second__menu__second__numbers-second {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-third__otcek-second__menu__second__numbers-third {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-third__otcek-second__menu__second--ingridients {
+    text-align: center;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+    border: 1px solid #FF5924;
+    border-radius: 84px;
+    padding-block: 10px;
+    width: 194px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-third__otcek-second__menu__second__price {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -15px;
+}
+
+.content-third__otcek-second__menu__second__price--summa {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.content-third__otcek-second__menu__second__price--dollar {
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    right: 23px;
+}
+
+.content-third__otcek-second__menu__second__price__calculator {
+    display: flex;
+    gap: 13px;
+}
+
+.content-third__otcek-second__menu__second__price__calculator--minus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-second__menu__second__price__calculator--plus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 24px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-second__menu__second__price__calculator--number {
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.content-third__otcek-second__menu__second--order {
+    font-size: 17px;
+    font-weight: 500;
+    background: var(--color-orenge);
+    border-radius: 84px;
+    padding-block: 13px;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-second__menu__third {
+    position: relative;
+    background-color: #210A01;
+    border-radius: 30px;
+    padding-inline: 30px;
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.content-third__otcek-second__menu__third--pizza {
+    position: absolute;
+    top: -80px;
+    left: 15%;
+}
+
+.content-third__otcek-second__menu__third--name {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.content-third__otcek-second__menu__third--composition {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text);
+    width: 230px;
+}
+
+.content-third__otcek-second__menu__third__numbers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.content-third__otcek-second__menu__third__numbers-first {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-third__otcek-second__menu__third__numbers-second {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-third__otcek-second__menu__third__numbers-third {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-third__otcek-second__menu__third--ingridients {
+    text-align: center;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+    border: 1px solid #FF5924;
+    border-radius: 84px;
+    padding-block: 10px;
+    width: 194px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-third__otcek-second__menu__third__price {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -15px;
+}
+
+.content-third__otcek-second__menu__third__price--summa {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.content-third__otcek-second__menu__third__price--dollar {
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    right: 23px;
+}
+
+.content-third__otcek-second__menu__third__price__calculator {
+    display: flex;
+    gap: 13px;
+}
+
+.content-third__otcek-second__menu__third__price__calculator--minus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-second__menu__third__price__calculator--plus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 24px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-second__menu__third__price__calculator--number {
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.content-third__otcek-second__menu__third--order {
+    font-size: 17px;
+    font-weight: 500;
+    background: var(--color-orenge);
+    border-radius: 84px;
+    padding-block: 13px;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-second__menu__fourth {
+    position: relative;
+    background-color: #210A01;
+    border-radius: 30px;
+    padding-inline: 30px;
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.content-third__otcek-second__menu__fourth--pizza {
+    position: absolute;
+    top: -80px;
+    left: 15%;
+}
+
+.content-third__otcek-second__menu__fourth--name {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.content-third__otcek-second__menu__fourth--composition {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text);
+    width: 230px;
+}
+
+.content-third__otcek-second__menu__fourth__numbers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.content-third__otcek-second__menu__fourth__numbers-first {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-third__otcek-second__menu__fourth__numbers-second {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-third__otcek-second__menu__fourth__numbers-third {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.pizza--size--is-active {
+    background: var(--color-orenge);
+    color: var(--color-white);
+    border: 0;
+    padding: 11px;
+}
+
+.content-third__otcek-second__menu__fourth--ingridients {
+    text-align: center;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+    border: 1px solid #FF5924;
+    border-radius: 84px;
+    padding-block: 10px;
+    width: 194px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-third__otcek-second__menu__fourth__price {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -15px;
+}
+
+.content-third__otcek-second__menu__fourth__price--summa {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.content-third__otcek-second__menu__fourth__price--dollar {
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    right: 23px;
+}
+
+.content-third__otcek-second__menu__fourth__price__calculator {
+    display: flex;
+    gap: 13px;
+}
+
+.content-third__otcek-second__menu__fourth__price__calculator--minus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-second__menu__fourth__price__calculator--plus {
+    height: 23px;
+    width: 23px;
+    position: relative;
+    top: 24px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-second__menu__fourth__price__calculator--number {
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.content-third__otcek-second__menu__fourth--order {
+    font-size: 17px;
+    font-weight: 500;
+    background: var(--color-orenge);
+    border-radius: 84px;
+    padding-block: 13px;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.content-third__otcek-first--text {
+    font-size: 43px;
+    font-weight: 500;
+    background-image: url(rsturant-fon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 286px;
+    border-radius: 34px;
+}
+
+.content-fourth {
+    margin-top: 80px;
+}
+
+.content-fourth__floor-first {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    gap: 25px;
+    scrollbar-color: #25252583 transparent;
+}
+
+.content-fourth__floor-first--flex-element-first {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    overflow-x: scroll;  
+}
+
+.content-fourth__floor-first--flex-element {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.content-fourth--text {
+    font-size: 25px;
+    font-weight: 500;
+    width: 200px;
+    margin-top: 86px;
+    margin-left: 30px;
+}
+
+.content-fourth--button {
+    font-size: 15px;
+    font-weight: 500;
+    background: var(--color-orenge);
+    padding: 10px 84px;
+    border-radius: 32px;
+    display: inline-block;
+    transition: var(--transition-duration);
+    margin-left: 30px;
+}
+
+.content-fourth--zogolovok {
+    font-size: 69px;
+    font-weight: 800;
+    line-height: 0px;
+    margin-top: 100px;
+    display: inline-block;
+    position: relative;
+    left: 150px;
+    top: 30px;
+}
+
+.content-fourth__floor-first__box-third--text {
+    font-size: 19px;
+    font-weight: 400;
+    width: 427px;
+    color: var(--color-text);
+}
+
+.button-box-second {
+    margin-top: 44px;
+}
+
+.content-fourth__floor-first__box-first {
+    background-image: url(box1.png);
+    background-repeat: no-repeat;
+    height: 260px;
+    width: 367px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.content-fourth__floor-first__box-second {
+    background-image: url(box2.png);
+    background-repeat: no-repeat;
+    height: 260px;
+    width: 396px;
+    border-radius: 30px;
+}
+
+.content-fourth__floor-second {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    gap: 25px;
+    overflow-x: scroll;
+    scrollbar-color: #25252583 transparent;
+}
+
+.content-fourth__floor-second__box-first {
+    background-image: url(box3.png);
+    background-repeat: no-repeat;
+    height: 260px;
+    width: 614px;
+    border-radius: 30px;
+}
+
+.content-fourth__floor-second__box-second {
+    background-image: url(box4.png);
+    background-repeat: no-repeat;
+    height: 260px;
+    width: 614px;
+    border-radius: 30px;
+}
+
+.content-fourth__floor-third {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    scrollbar-color: #25252583 transparent;
+}
+
+.content-fourth__floor-third__box-first {
+    background-image: url(box5.png);
+    background-repeat: no-repeat;
+    height: 260px;
+    width: 400px;
+    border-radius: 30px;
+}
+
+.content-fourth__floor-third__box-second {
+    background-image: url(box6.png);
+    background-repeat: no-repeat;
+    height: 260px;
+    width: 400px;
+    border-radius: 30px;
+}
+
+.content-fourth__floor-third__box-third {
+    background-image: url(box7.png);
+    background-repeat: no-repeat;
+    height: 260px;
+    width: 400px;
+    border-radius: 30px;
+}
+
+.button--box-third {
+    position: relative;
+    bottom: 27px;
+}
+
+.content-fourth--fon {
+    position: absolute;
+    top: 2730px;
+    left: 20px;
+}
+
+.content-fourth--egs {
+    position: absolute;
+    z-index: 20;
+    top: 2830px;
+    left: 0px;
+}
+
+.content-fourth--buritto {
+    position: absolute;
+    z-index: 20;
+    top: 3100px;
+    right: 0px;
+}
+
+.content-fourth--coffe {
+    position: absolute;
+    z-index: 20;
+    top: 3500px;
+    left: 0px;
+}
+
+.content-fifth {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-fifth__column-first {
+    position: relative;
+}
+
+.content-fifth__column-first--zogolovok {
+    font-size: 69px;
+    font-weight: 800;
+    position: relative;
+    top: 50px;
+}
+
+.content-fifth__column-first--text {
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--color-text);
+    max-width: 440px;
+}
+
+.content-fifth__column-first--arrow {
+    position: absolute;
+    top: 450px;
+    right: -140px;
+}
+
+.content-fifth__column-second {
+    width: 650px;
+    position: relative;
+}
+
+.content-fifth__column-second--pizza {
+    position: relative;
+    top: 90px;
+}
+
+.content-fifth__column-second--ikon-pizza {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.content-fifth__column-second--fri {
+    position: absolute;
+    bottom: -100px;
+    left: -50px;
+}
+
+.footer-fon {
+    background: linear-gradient(170deg, rgb(14, 6, 0) 100%, rgb(15, 7, 0) 100%);
+    width: 100%;  
+    height: 370px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+
+.footer__logo--logo {
+    font-size: 30px;
+    font-weight: 800;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 240px;
+}
+
+.footer__logo--number {
+    font-size: 21px;
+    font-weight: 400;
+    background: var(--color-orenge);
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+}
+
+.footer__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer__menu--list {
+    position: relative;
+    top: 25px;
+    
+}
+
+.footer__menu--item--zogolovok {
+    font-size: 19px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.footer__menu--item a {
+    font-size: 17px;
+    font-weight: 400;
+    color: #515151;
+    margin-bottom: 12px;  
+    transition: var(--transition-duration);
+}
+
+.footer__menu--item {
+    margin-bottom: 12px;  
+}
+
+.footer__ikons--image {
+    margin-top: 300px;
+    margin-right: 20px;
+}
+
+
+
+/* Медиа-запросы */
+
+@media (max-width: 1200px) {
+    .content-second__menu {
+       display: grid;
+       grid-template-columns: 290px 290px;
+       justify-content: center;
+        gap: 15px;
+    }
+
+    .content-second__assortment {
+        justify-content: center;
+    }
+
+    .content-second__menu__fourth {
+        margin-top: 20px;
+    }
+
+    .content-second__menu__third {
+        margin-top: 20px;
+    }
+
+    .content-third__otcek-second__menu {
+        display: grid;
+        grid-template-columns: 290px 290px;
+        justify-content: center;
+         gap: 15px;
+     }
+ 
+     .content-third__otcek-second__menu__fourth {
+         margin-top: 20px;
+     }
+ 
+     .content-third__otcek-second__menu__third {
+         margin-top: 20px;
+     }
+
+     .content-fourth--egs {
+        display: none;
+    }
+    
+    .content-fourth--buritto {
+        display: none;
+    }
+    
+    .content-fourth--coffe {
+        display: none;
+    }
+
+    .content-fourth__floor-first {
+        display: grid;
+    }
+
+    .content-fourth__floor-first__box-third {
+        order: -1;
+    }
+
+    .content-fourth {
+        margin-top: 0px;
+    }
+
+    .content-fifth__column-second--pizza {
+        position: relative;
+        top: 150px;
+        width: 500px;
+    }
+
+    .content-fifth__column-second--ikon-pizza {
+        position: absolute;
+        top: 80px;
+        right: 50px;
+        width: 200px;
+    }
+    
+    .content-fifth__column-second--fri {
+        position: absolute;
+        bottom: 20px;
+        left: -50px;
+        width: 200px;
+    }
+
+    .content-fifth__column-first--arrow {
+        display: none;
+    }
+
+    .content-fifth {
+        margin-top: -80px;
+    }
+    
+    .content-fifth__column-second {
+        width: 500px;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .header__menu--list {
+        gap: 30px;
+    }
+
+    .header__items--button {
+        width: 140px;
+    }
+
+    .content-first__column-first--zogolovok {
+        font-size: 55px;
+        max-width: 530px;
+    }
+
+    .content-first__column-first--img-description {
+        margin-top: 30px;
+    }
+
+    .content-first__column-first--arrow-big {
+        right: -39px;
+    }
+
+    .content-first__column-second--fon1 {
+        right: 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header {
+        margin-left: 0;
+    }
+
+    .content-first {
+        display: grid;
+        justify-content: center;
+    }
+
+    .content-first__column-first--img-description {
+        margin-top: -30px;
+    }
+
+    .content-first__column-first--arrow-small {
+        display: none;
+    }
+
+    .content-first__column-first--arrow-big {
+        display: none;
+    }
+
+    .content-first__column-second {
+        margin-top: 50px;
+        order: -1;
+        text-align: center;
+    }
+
+    .content-first__column-first {
+        display: grid;
+    }
+
+    .content-first__column-first--description {
+        order: 1;
+    }
+
+    .content-first__column-first--img-description {
+        order: 1;
+    }
+
+    .content-first__column-second--pizza-ikon {
+        right: -70px;
+    }
+
+    .content-first__column-second--fon1 {
+        right: -130px;
+    }
+
+    .content-first__column-second--foto {
+        position: relative;
+        bottom: 1550px;
+    }
+
+    .content-fifth {
+        display: grid;
+        justify-content: center;
+    }
+
+    .content-fifth__column-second {
+        order: -1;
+    }
+}
+
+@media (max-width: 800px) {
+    .header__menu {
+        display: none;
+    }
+
+    .header__items--button {
+        display: none;
+    }
+
+    .header {
+        margin-top: 0;
+    }
+
+    .burger-button {
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 27px;
+    }
+
+    .burger-button--element-first {
+        width: 27px;
+        height: 2px;
+        background: var(--color-orenge);
+        border-radius: 10px;
+        position: relative;
+        top: 10px;
+    }
+
+    .burger-button--element-second {
+        width: 27px;
+        height: 2px;
+        background: var(--color-orenge);
+        border-radius: 10px;
+    }
+
+    .burger-button--element-third {
+        width: 27px;
+        height: 2px;
+        background: var(--color-orenge);
+        border-radius: 10px;
+        position: relative;
+        bottom: 10px;
+    }
+
+    .header__items--image {
+        margin-right: 60px;
+        margin-top: 15px;
+    }
+
+    .content-first__column-second--pizza-foto {
+        width: 430px;
+    }
+
+    .content-first__column-first--pizza-fon {
+        display: none;
+    }
+
+    .content-first__column-second--fon1 {
+        display: none;
+    }
+
+    .content-first__column-second--fon2 {
+        display: none;
+    }
+
+    .content-first__column-second--pizza-ikon {
+        width: 200px;
+        right: 20px;
+    }
+
+    .content-first__column-second--fri {
+        width: 200px;
+        top: 450px;
+        left: -40px;
+    }
+
+    .content-first__column-second--foto {
+        position: relative;
+        bottom: 1370px;
+    }
+
+    .footer__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 70px;
+    }
+
+    .footer__logo--logo {
+        margin-bottom: 500px;
+    }
+
+    .footer__ikons--image {
+        margin-top: 570px;
+    }
+
+    .footer__logo {
+        position: absolute;
+    }
+
+    .footer-fon { 
+        height: 620px;
+    }
+}
+
+@media (max-width: 590px) {
+    .header--logo {
+        font-size: 23px;
+    }
+
+    .header__items--image {
+        transform: scale(0.8);
+    }
+
+    .burger-button {
+        top: 10px;
+    }
+
+    .content-first__column-second--pizza-foto {
+        width: 240px;
+    }
+
+    .content-first__column-second--pizza-ikon {
+        width: 129px;
+        right: 70px;
+        top: -50px;
+    }
+
+    .content-first__column-second--fri {
+        width: 110px;
+        top: 250px;
+        left: 70px;
+    }
+
+    .content-first__column-first--zogolovok {
+        font-size: 48px;
+        max-width: 450px;
+    }
+
+    .content-first__column-first--text {
+        font-size: 14px;
+        max-width: 310px;
+    }
+
+    .content-first__column-first--description {
+        font-size: 14px;
+    }
+
+    .content-first__column-first--img-description {
+        width: 191px;
+        margin-top: -20px;
+        position: relative;
+        right: 17px;
+    }
+
+    .content-first__column-first__switch {
+        transform: scale(0.8);
+        position: relative;
+        right: 40px;
+    }
+
+    .content-first__column-second {
+        margin-top: 10px;
+    }
+
+    .content-second--zogolovok {
+        font-size: 48px;
+    }
+
+    .content-second__assortment--element {
+        font-size: 12px;
+        padding: 12px 45px;
+    }
+
+    .content-second--menu-fon {
+        width: 285px;
+    }
+
+    .content-second__menu {
+        margin-top: 50px;
+        grid-template-columns: 181px 181px;
+    }
+
+    .content-second__menu__first {
+        position: relative;
+        background-color: #210A01;
+        border-radius: 30px;
+        padding-inline: 30px;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    
+    .content-second__menu__first--pizza {
+        position: absolute;
+        top: -45px;
+        left: 23%;
+        width: 100px;
+    }
+    
+    .content-second__menu__first--name {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .content-second__menu__first--composition {
+        font-size: 9px;
+        font-weight: 400;
+        color: var(--color-text);
+        width: 150px;
+    }
+    
+    .content-second__menu__first__numbers {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -10px;
+    }
+
+    .content-second__menu__first__numbers-first {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;
+        
+    }
+
+    .content-second__menu__first__numbers-second {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;
+        
+    }
+
+    .content-second__menu__first__numbers-third {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;
+        
+    }
+    
+    .content-second__menu__first--ingridients {
+        text-align: center;
+        background: var(--color-orenge);
+        background-clip: text;
+        color: transparent;
+        border: 1px solid #FF5924;
+        border-radius: 84px;
+        padding-block: 6px;
+        width: 118px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 9px;
+        font-weight: 400;
+    }
+    
+    .content-second__menu__first__price {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -15px;
+    }
+    
+    .content-second__menu__first__price--summa {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .content-second__menu__first__price--dollar {
+        font-size: 10px;
+        font-weight: 700;
+        position: relative;
+        right: 10px;
+    }
+    
+    .content-second__menu__first__price__calculator {
+        display: flex;
+        gap: 2px;
+    }
+    
+    .content-second__menu__first__price__calculator--minus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-second__menu__first__price__calculator--plus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-second__menu__first__price__calculator--number {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--color-text);
+    }
+    
+    .content-second__menu__first--order {
+        font-size: 10px;
+        font-weight: 500;
+        background: var(--color-orenge);
+        border-radius: 84px;
+        padding-block: 9px;
+        width: 118px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -5px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+
+    .content-second__menu__second {
+        position: relative;
+        background-color: #210A01;
+        border-radius: 30px;
+        padding-inline: 30px;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    
+    .content-second__menu__second--pizza {
+        position: absolute;
+        top: -45px;
+        left: 23%;
+        width: 100px;
+    }
+    
+    .content-second__menu__second--name {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .content-second__menu__second--composition {
+        font-size: 9px;
+        font-weight: 400;
+        color: var(--color-text);
+        width: 150px;
+    }
+    
+    .content-second__menu__second__numbers {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -10px;
+    }
+
+    .content-second__menu__second__numbers-first {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;       
+    }
+
+    .content-second__menu__second__numbers-second {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+
+    .content-second__menu__second__numbers-third {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+    
+    .content-second__menu__second--ingridients {
+        text-align: center;
+        background: var(--color-orenge);
+        background-clip: text;
+        color: transparent;
+        border: 1px solid #FF5924;
+        border-radius: 84px;
+        padding-block: 6px;
+        width: 118px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 9px;
+        font-weight: 400;
+    }
+    
+    .content-second__menu__second__price {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -15px;
+    }
+    
+    .content-second__menu__second__price--summa {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .content-second__menu__second__price--dollar {
+        font-size: 10px;
+        font-weight: 700;
+        position: relative;
+        right: 10px;
+    }
+    
+    .content-second__menu__second__price__calculator {
+        display: flex;
+        gap: 2px;
+    }
+    
+    .content-second__menu__second__price__calculator--minus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-second__menu__second__price__calculator--plus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-second__menu__second__price__calculator--number {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--color-text);
+    }
+    
+    .content-second__menu__second--order {
+        font-size: 10px;
+        font-weight: 500;
+        background: var(--color-orenge);
+        border-radius: 84px;
+        padding-block: 9px;
+        width: 118px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -5px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+
+    .content-second__menu__third {
+        position: relative;
+        background-color: #210A01;
+        border-radius: 30px;
+        padding-inline: 30px;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    
+    .content-second__menu__third--pizza {
+        position: absolute;
+        top: -45px;
+        left: 23%;
+        width: 100px;
+    }
+    
+    .content-second__menu__third--name {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .content-second__menu__third--composition {
+        font-size: 9px;
+        font-weight: 400;
+        color: var(--color-text);
+        width: 150px;
+    }
+    
+    .content-second__menu__third__numbers {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -10px;
+    }
+
+    .content-second__menu__third__numbers-first {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;       
+    }
+
+    .content-second__menu__third__numbers-second {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+
+    .content-second__menu__third__numbers-third {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+    
+    .content-second__menu__third--ingridients {
+        text-align: center;
+        background: var(--color-orenge);
+        background-clip: text;
+        color: transparent;
+        border: 1px solid #FF5924;
+        border-radius: 84px;
+        padding-block: 6px;
+        width: 118px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 9px;
+        font-weight: 400;
+    }
+    
+    .content-second__menu__third__price {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -15px;
+    }
+    
+    .content-second__menu__third__price--summa {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .content-second__menu__third__price--dollar {
+        font-size: 10px;
+        font-weight: 700;
+        position: relative;
+        right: 10px;
+    }
+    
+    .content-second__menu__third__price__calculator {
+        display: flex;
+        gap: 2px;
+    }
+    
+    .content-second__menu__third__price__calculator--minus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-second__menu__third__price__calculator--plus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-second__menu__third__price__calculator--number {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--color-text);
+    }
+    
+    .content-second__menu__third--order {
+        font-size: 10px;
+        font-weight: 500;
+        background: var(--color-orenge);
+        border-radius: 84px;
+        padding-block: 9px;
+        width: 118px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -5px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+
+    .content-second__menu__fourth {
+        position: relative;
+        background-color: #210A01;
+        border-radius: 30px;
+        padding-inline: 30px;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    
+    .content-second__menu__fourth--pizza {
+        position: absolute;
+        top: -45px;
+        left: 23%;
+        width: 100px;
+    }
+    
+    .content-second__menu__fourth--name {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .content-second__menu__fourth--composition {
+        font-size: 9px;
+        font-weight: 400;
+        color: var(--color-text);
+        width: 150px;
+    }
+    
+    .content-second__menu__fourth__numbers {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -10px;
+    }
+
+    .content-second__menu__fourth__numbers-first {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;       
+    }
+
+    .content-second__menu__fourth__numbers-second {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+
+    .content-second__menu__fourth__numbers-third {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+    
+    .content-second__menu__fourth--ingridients {
+        text-align: center;
+        background: var(--color-orenge);
+        background-clip: text;
+        color: transparent;
+        border: 1px solid #FF5924;
+        border-radius: 84px;
+        padding-block: 6px;
+        width: 118px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 9px;
+        font-weight: 400;
+    }
+    
+    .content-second__menu__fourth__price {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -15px;
+    }
+    
+    .content-second__menu__fourth__price--summa {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .content-second__menu__fourth__price--dollar {
+        font-size: 10px;
+        font-weight: 700;
+        position: relative;
+        right: 10px;
+    }
+    
+    .content-second__menu__fourth__price__calculator {
+        display: flex;
+        gap: 2px;
+    }
+    
+    .content-second__menu__fourth__price__calculator--minus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-second__menu__fourth__price__calculator--plus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-second__menu__fourth__price__calculator--number {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--color-text);
+    }
+    
+    .content-second__menu__fourth--order {
+        font-size: 10px;
+        font-weight: 500;
+        background: var(--color-orenge);
+        border-radius: 84px;
+        padding-block: 9px;
+        width: 118px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -5px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+
+    .content-third__otcek-second__menu {
+        margin-top: 50px;
+        grid-template-columns: 181px 181px;
+    }
+
+    .content-third__otcek-second__menu__first {
+        position: relative;
+        background-color: #210A01;
+        border-radius: 30px;
+        padding-inline: 30px;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    
+    .content-third__otcek-second__menu__first--pizza {
+        position: absolute;
+        top: -45px;
+        left: 23%;
+        width: 100px;
+    }
+    
+    .content-third__otcek-second__menu__first--name {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .content-third__otcek-second__menu__first--composition {
+        font-size: 9px;
+        font-weight: 400;
+        color: var(--color-text);
+        width: 150px;
+    }
+
+    .content-third__otcek-second__menu__first__numbers {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -10px;
+    }
+
+    .content-third__otcek-second__menu__first__numbers-first {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;       
+    }
+
+    .content-third__otcek-second__menu__first__numbers-second {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+
+    .content-third__otcek-second__menu__first__numbers-third {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+    
+    .content-third__otcek-second__menu__first--ingridients {
+        text-align: center;
+        background: var(--color-orenge);
+        background-clip: text;
+        color: transparent;
+        border: 1px solid #FF5924;
+        border-radius: 84px;
+        padding-block: 6px;
+        width: 118px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 9px;
+        font-weight: 400;
+    }
+    
+    .content-third__otcek-second__menu__first__price {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -15px;
+    }
+    
+    .content-third__otcek-second__menu__first__price--summa {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .content-third__otcek-second__menu__first__price--dollar {
+        font-size: 10px;
+        font-weight: 700;
+        position: relative;
+        right: 10px;
+    }
+    
+    .content-third__otcek-second__menu__first__price__calculator {
+        display: flex;
+        gap: 2px;
+    }
+    
+    .content-third__otcek-second__menu__first__price__calculator--minus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-third__otcek-second__menu__first__price__calculator--plus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-third__otcek-second__menu__first__price__calculator--number {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--color-text);
+    }
+    
+    .content-third__otcek-second__menu__first--order {
+        font-size: 10px;
+        font-weight: 500;
+        background: var(--color-orenge);
+        border-radius: 84px;
+        padding-block: 9px;
+        width: 118px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -5px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+
+    .content-third__otcek-second__menu__second {
+        position: relative;
+        background-color: #210A01;
+        border-radius: 30px;
+        padding-inline: 30px;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    
+    .content-third__otcek-second__menu__second--pizza {
+        position: absolute;
+        top: -45px;
+        left: 23%;
+        width: 100px;
+    }
+    
+    .content-third__otcek-second__menu__second--name {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .content-third__otcek-second__menu__second--composition {
+        font-size: 9px;
+        font-weight: 400;
+        color: var(--color-text);
+        width: 150px;
+    }
+    
+    .content-third__otcek-second__menu__second__numbers {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -10px;
+    }
+
+    .content-third__otcek-second__menu__second__numbers-first {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;       
+    }
+
+    .content-third__otcek-second__menu__second__numbers-second {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+
+    .content-third__otcek-second__menu__second__numbers-third {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+    
+    .content-third__otcek-second__menu__second--ingridients {
+        text-align: center;
+        background: var(--color-orenge);
+        background-clip: text;
+        color: transparent;
+        border: 1px solid #FF5924;
+        border-radius: 84px;
+        padding-block: 6px;
+        width: 118px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 9px;
+        font-weight: 400;
+    }
+    
+    .content-third__otcek-second__menu__second__price {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -15px;
+    }
+    
+    .content-third__otcek-second__menu__second__price--summa {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .content-third__otcek-second__menu__second__price--dollar {
+        font-size: 10px;
+        font-weight: 700;
+        position: relative;
+        right: 10px;
+    }
+    
+    .content-third__otcek-second__menu__second__price__calculator {
+        display: flex;
+        gap: 2px;
+    }
+    
+    .content-third__otcek-second__menu__second__price__calculator--minus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-third__otcek-second__menu__second__price__calculator--plus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-third__otcek-second__menu__second__price__calculator--number {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--color-text);
+    }
+    
+    .content-third__otcek-second__menu__second--order {
+        font-size: 10px;
+        font-weight: 500;
+        background: var(--color-orenge);
+        border-radius: 84px;
+        padding-block: 9px;
+        width: 118px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -5px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+
+    .content-third__otcek-second__menu__third {
+        position: relative;
+        background-color: #210A01;
+        border-radius: 30px;
+        padding-inline: 30px;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    
+    .content-third__otcek-second__menu__third--pizza {
+        position: absolute;
+        top: -45px;
+        left: 23%;
+        width: 100px;
+    }
+    
+    .content-third__otcek-second__menu__third--name {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .content-third__otcek-second__menu__third--composition {
+        font-size: 9px;
+        font-weight: 400;
+        color: var(--color-text);
+        width: 150px;
+    }
+    
+    .content-third__otcek-second__menu__third__numbers {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -10px;
+    }
+
+    .content-third__otcek-second__menu__third__numbers-first {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;       
+    }
+
+    .content-third__otcek-second__menu__third__numbers-second {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+
+    .content-third__otcek-second__menu__third__numbers-third {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+    
+    .content-third__otcek-second__menu__third--ingridients {
+        text-align: center;
+        background: var(--color-orenge);
+        background-clip: text;
+        color: transparent;
+        border: 1px solid #FF5924;
+        border-radius: 84px;
+        padding-block: 6px;
+        width: 118px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 9px;
+        font-weight: 400;
+    }
+    
+    .content-third__otcek-second__menu__third__price {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -15px;
+    }
+    
+    .content-third__otcek-second__menu__third__price--summa {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .content-third__otcek-second__menu__third__price--dollar {
+        font-size: 10px;
+        font-weight: 700;
+        position: relative;
+        right: 10px;
+    }
+    
+    .content-third__otcek-second__menu__third__price__calculator {
+        display: flex;
+        gap: 2px;
+    }
+    
+    .content-third__otcek-second__menu__third__price__calculator--minus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-third__otcek-second__menu__third__price__calculator--plus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-third__otcek-second__menu__third__price__calculator--number {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--color-text);
+    }
+    
+    .content-third__otcek-second__menu__third--order {
+        font-size: 10px;
+        font-weight: 500;
+        background: var(--color-orenge);
+        border-radius: 84px;
+        padding-block: 9px;
+        width: 118px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -5px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+
+    .content-third__otcek-second__menu__fourth {
+        position: relative;
+        background-color: #210A01;
+        border-radius: 30px;
+        padding-inline: 30px;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    
+    .content-third__otcek-second__menu__fourth--pizza {
+        position: absolute;
+        top: -45px;
+        left: 23%;
+        width: 100px;
+    }
+    
+    .content-third__otcek-second__menu__fourth--name {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .content-third__otcek-second__menu__fourth--composition {
+        font-size: 9px;
+        font-weight: 400;
+        color: var(--color-text);
+        width: 150px;
+    }
+    
+    .content-third__otcek-second__menu__fourth__numbers {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -10px;
+    }
+
+    .content-third__otcek-second__menu__fourth__numbers-first {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;       
+    }
+
+    .content-third__otcek-second__menu__fourth__numbers-second {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+
+    .content-third__otcek-second__menu__fourth__numbers-third {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;      
+    }
+    
+    .content-third__otcek-second__menu__fourth--ingridients {
+        text-align: center;
+        background: var(--color-orenge);
+        background-clip: text;
+        color: transparent;
+        border: 1px solid #FF5924;
+        border-radius: 84px;
+        padding-block: 6px;
+        width: 118px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 9px;
+        font-weight: 400;
+    }
+    
+    .content-third__otcek-second__menu__fourth__price {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -15px;
+    }
+    
+    .content-third__otcek-second__menu__fourth__price--summa {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .content-third__otcek-second__menu__fourth__price--dollar {
+        font-size: 10px;
+        font-weight: 700;
+        position: relative;
+        right: 10px;
+    }
+    
+    .content-third__otcek-second__menu__fourth__price__calculator {
+        display: flex;
+        gap: 2px;
+    }
+    
+    .content-third__otcek-second__menu__fourth__price__calculator--minus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-third__otcek-second__menu__fourth__price__calculator--plus {
+        height: 14px;
+        width: 14px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
+    
+    .content-third__otcek-second__menu__fourth__price__calculator--number {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--color-text);
+    }
+    
+    .content-third__otcek-second__menu__fourth--order {
+        font-size: 10px;
+        font-weight: 500;
+        background: var(--color-orenge);
+        border-radius: 84px;
+        padding-block: 9px;
+        width: 118px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -5px;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    } 
+
+    .content-third__otcek-first--text {
+        font-size: 23px;
+        height: 175px;
+    }
+
+    .content-fourth--zogolovok {
+        font-size: 48px;
+    }
+
+    .content-fourth__floor-first__box-third--text {
+        font-size: 14px;
+    }
+
+    .content-fourth__floor-first__box-first {
+        height: 161px;
+        width: 228px;
+        border-radius: 18px;
+    }
+
+    .content-fourth__floor-first__box-second {
+        height: 161px;
+        width: 228px;
+        border-radius: 18px;
+    }
+
+    .content-fourth--text {
+        font-size: 15px;
+        margin-top: 50px;
+        margin-left: 15px;
+    }
+
+    .content-fourth--button {
+        font-size: 9px;
+        padding: 7px 50px;
+        margin-left: 15px;
+    }
+
+    .button-box-second {
+        margin-top: 27px;
+    }
+
+    .button--box-third {
+        bottom: 20px;
+    }
+
+    .content-fourth__floor-second__box-first {
+        height: 161px;
+        width: 549px;
+        border-radius: 18px;
+    }
+
+    .content-fourth__floor-second__box-second {
+        height: 161px;
+        width: 549px;
+        border-radius: 18px;
+    }
+
+    .content-fourth__floor-third__box-first {
+        height: 161px;
+        width: 249px;
+        border-radius: 18px;
+    }
+
+    .content-fourth__floor-third__box-second {
+        height: 161px;
+        width: 249px;
+        border-radius: 18px;
+    }
+
+    .content-fourth__floor-third__box-third {
+        height: 161px;
+        width: 249px;
+        border-radius: 18px;
+    }
+
+    .content-fourth--fon {
+        display: none;
+    }
+
+    .content-fourth {
+        margin-top: -20px;
+        overflow-x: hidden;
+    }
+
+    .content-fourth__floor-first__box-third--text {
+        width: 316px;
+        text-align: right;
+    }
+
+    .content-fourth__floor-first {
+        margin-left: 90px;
+    }
+
+    .content-fourth__floor-second {
+        margin-left: 90px;
+    }
+
+    .content-fourth__floor-third {
+        margin-left: 90px;
+    }
+    
+    .content-fifth__column-first--zogolovok {
+        font-size: 48px;
+        font-weight: 800;
+        top: 30px;
+    }
+    
+    .content-fifth__column-first--text {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--color-text);
+        max-width: 320px;
+    }
+
+    .content-fifth__column-first--pizzas {
+        width: 342px;
+    }
+    
+    .content-fifth__column-second {
+        width: 342px;
+        margin-bottom: 50px;
+    }
+    
+    .content-fifth__column-second--pizza {
+        width: 340px;
+        text-align: center;
+    }
+    
+    .content-fifth__column-second--ikon-pizza {
+        position: absolute;
+        width: 117px;
+        top: 110px;
+        right: 0;
+    }
+    
+    .content-fifth__column-second--fri {
+        position: absolute;
+        width: 100px;
+        bottom: -130px;
+        left: -10px;
+    }
+
+    .footer__logo--logo {
+        font-size: 24px;
+    }
+
+    .footer__logo--number {
+        font-size: 14px;
+    }
+
+    .footer__menu--item--zogolovok {
+        font-size: 15px;
+    }
+
+    .footer__menu--item a {
+        font-size: 14px;
+    }
+
+    .footer__ikons--image {
+        width: 82px;
+        margin-top: 550px;
+    }
+
+    .footer-fon { 
+        height: 600px;
+    }
+
+    .pizza--size--is-active {
+        background: var(--color-orenge);
+        color: var(--color-white);
+        border: 0;
+        padding: 8px;
+    }
+}
+
+
+
+/* Эффект наведения */
+
+@media (hover: hover) {
+    .header__menu--item a:hover {
+        background: var(--color-orenge);
+        background-clip: text;
+        color: transparent;
+        position: relative;       
+    }
+
+    .header__menu--item a:hover::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: var(--color-orenge);
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        top: 25px;
+        left: 47%;
+    }
+
+    .header__items--button:hover {
+        transform: scale(1.1);
+    }
+
+    .header__items--image:hover {
+        transform: scale(1.1);
+    }
+
+    .menu-is-active--item a:hover {
+        background: var(--color-orenge);
+        background-clip: text;
+        color: transparent;
+        position: relative; 
+    }
+
+    .menu-is-active--item a:hover::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: var(--color-orenge);
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        top: 40px;
+        left: 47%;
+    }
+
+    .content-second__assortment--element:hover {
+        background: var(--color-orenge);
+    }
+
+    .content-second__menu__first__price__calculator--minus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-second__menu__first__price__calculator--plus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-second__menu__second__price__calculator--minus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-second__menu__second__price__calculator--plus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-second__menu__third__price__calculator--minus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-second__menu__third__price__calculator--plus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-second__menu__fourth__price__calculator--minus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-second__menu__fourth__price__calculator--plus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-second__menu__first--order:hover {
+        transform: scale(1.1);
+    }
+
+    .content-second__menu__second--order:hover {
+        transform: scale(1.1);
+    }
+
+    .content-second__menu__third--order:hover {
+        transform: scale(1.1);
+    }
+
+    .content-second__menu__fourth--order:hover {
+        transform: scale(1.1);
+    }
+
+    .content-third__otcek-second__menu__first__price__calculator--minus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-third__otcek-second__menu__first__price__calculator--plus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-third__otcek-second__menu__second__price__calculator--minus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-third__otcek-second__menu__second__price__calculator--plus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-third__otcek-second__menu__third__price__calculator--minus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-third__otcek-second__menu__third__price__calculator--plus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-third__otcek-second__menu__fourth__price__calculator--minus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-third__otcek-second__menu__fourth__price__calculator--plus:hover {
+        transform: scale(1.1);
+    }
+
+    .content-third__otcek-second__menu__first--order:hover {
+        transform: scale(1.1);
+    }
+
+    .content-third__otcek-second__menu__second--order:hover {
+        transform: scale(1.1);
+    }
+
+    .content-third__otcek-second__menu__third--order:hover {
+        transform: scale(1.1);
+    }
+
+    .content-third__otcek-second__menu__fourth--order:hover {
+        transform: scale(1.1);
+    }
+
+    .content-fourth--button:hover {
+        transform: scale(1.1);
+    }
+
+    .footer__menu--item a:hover {
+        color: var(--color-white);
+    } 
+}
+
+
+
+/* Анимации */
+
+@keyframes swith {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
