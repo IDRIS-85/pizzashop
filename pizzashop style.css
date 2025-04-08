@@ -102,8 +102,7 @@ html {
     bottom: 0;
     top: 0;
     margin-top: 0;
-    padding-top: 10%;
-    line-height: 150px;
+    line-height: 20vh;
     font-size: 30px;
     background-color: #1e0c007a;
     height: 100%;
