@@ -108,7 +108,7 @@ html {
     background-color: #1e0c007a;
     height: 100%;
     width: 100%;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(7px);
     z-index: 100;
 }
 
@@ -118,6 +118,7 @@ html {
 
 .menu-is-active--list {
     text-align: center;
+    padding: 0;
 }
 
 .menu-is-active--item a {
