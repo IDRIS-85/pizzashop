@@ -1980,6 +1980,10 @@ html {
     .content-fifth__column-second {
         order: -1;
     }
+
+    .content-fifth__column-second--fri {
+        bottom: -130px;
+    }
 }
 
 @media (max-width: 800px) {
