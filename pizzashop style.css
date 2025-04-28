@@ -201,7 +201,7 @@ html {
     line-height: 25px;
     letter-spacing: 0.5px;
     color: var(--color-text);
-    width: 430px;
+    max-width: 430px;
     margin-top: -35px;
 }
 
@@ -2144,8 +2144,8 @@ html {
     }
 
     .content-first__column-first--zogolovok {
-        font-size: 48px;
-        max-width: 450px;
+        font-size: 45px;
+        max-width: 420px;
     }
 
     .content-first__column-first--text {
@@ -2155,6 +2155,7 @@ html {
 
     .content-first__column-first--description {
         font-size: 14px;
+        width: 110px;
     }
 
     .content-first__column-first--img-description {
@@ -2168,6 +2169,7 @@ html {
         transform: scale(0.8);
         position: relative;
         right: 40px;
+        width: 350px;
     }
 
     .content-first__column-second {
