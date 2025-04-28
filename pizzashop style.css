@@ -161,6 +161,8 @@ html {
     margin-right: 10px;
     transition: var(--transition-duration);
     cursor: pointer;
+    position: relative;
+    z-index: -1;
 }
 
 .burger-button {
