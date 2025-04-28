@@ -2004,7 +2004,7 @@ html {
     .burger-button {
         display: block;
         position: absolute;
-        right: 0px;
+        right: 10px;
         top: 27px;
     }
 
