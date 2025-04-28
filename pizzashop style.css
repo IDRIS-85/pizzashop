@@ -2353,13 +2353,6 @@ html {
     .footer-fon { 
         height: 600px;
     }
-
-    .pizza--size--is-active {
-        background: var(--color-orenge);
-        color: var(--color-white);
-        border: 0;
-        padding: 8px;
-    }
 }
 
 
